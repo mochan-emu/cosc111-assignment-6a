@@ -6,7 +6,7 @@ public class DrawGraphics {
     
     /** Initializes this class for drawing. */
     public DrawGraphics() {
-        box = new BouncingBall(200, 50, 50);
+        box = new BouncingBox(200, 50, Color.RED);
         box.setMovementVector(1, 1);
     }
 
