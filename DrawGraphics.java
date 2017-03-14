@@ -4,13 +4,9 @@ import java.awt.Graphics;
 public class DrawGraphics {
     BouncingBox box;
     
-    // Array of points that we will use to draw graphs
-    int[] x;
-    int[] y;
-    
     /** Initializes this class for drawing. */
     public DrawGraphics() {
-        box = new BouncingBox(200, 50, Color.RED);
+        box = new BouncingBall(200, 50, 50);
         box.setMovementVector(1, 1);
     }
 
