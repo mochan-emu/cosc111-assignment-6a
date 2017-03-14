@@ -24,13 +24,23 @@ public class BouncingBox {
 
     /** Draws the box at its current position on to surface. */
     public void draw(Graphics surface) {
+    	// Draw the object
+    	drawShape(surface);
+    	
+    	// Move the shape
+    	moveShape(surface);
+    }
+    
+    public void drawShape(Graphics surface) {
         // Draw the object
         surface.setColor(color);
         surface.fillRect(x - SIZE/2, y - SIZE/2, SIZE, SIZE);
         surface.setColor(Color.BLACK);
         ((Graphics2D) surface).setStroke(new BasicStroke(3.0f));
         surface.drawRect(x - SIZE/2, y - SIZE/2, SIZE, SIZE);
-        
+    }
+    
+    public void moveShape(Graphics surface) {
         // Move the center of the object each time we draw it
         x += xDirection;
         y += yDirection;
